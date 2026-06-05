@@ -1,4 +1,4 @@
-# 🎭 The Fitting Room - AI Virtual Try-On Studio
+#  The Fitting Room - AI Virtual Try-On Studio
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -11,25 +11,25 @@ The Fitting Room is a cutting-edge virtual try-on application that uses advanced
 
 ## ✨ Features
 
-### 🎨 **Intelligent Virtual Try-On**
+###  **Intelligent Virtual Try-On**
 - **AI-Powered Segmentation**: Automatically detects and segments clothing types using Groq's Llama vision model
 - **Realistic Rendering**: Uses FLUX diffusion models with LoRA fine-tuning for photorealistic results
 - **Smart Masking**: Intelligent body part detection for accurate clothing placement
 - **Multiple Clothing Types**: Supports dresses, shirts, pants, skirts, and more
 
-### 🖥️ **Modern Web Interface**
+### **Modern Web Interface**
 - **Elegant UI**: Beautiful, responsive design with 3D animations and smooth transitions
 - **Drag & Drop**: Easy file upload with visual feedback
 - **Real-time Preview**: Instant image previews and upload status
 - **Mobile Friendly**: Fully responsive design that works on all devices
 
-### ⚡ **High Performance**
+###  **High Performance**
 - **Cloud Integration**: Seamless Cloudinary integration for image hosting
 - **Fast Processing**: Optimized ComfyUI workflow for quick results
 - **Batch Processing**: Support for multiple output variations
 - **Caching**: Smart caching system for improved performance
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
@@ -42,14 +42,14 @@ The Fitting Room is a cutting-edge virtual try-on application that uses advanced
 └─────────────────┘    └──────────────────┘    └─────────────────┘
 ```
 
-### 🧠 **AI Pipeline**
+###  **AI Pipeline**
 1. **Image Analysis**: Groq Llama vision model analyzes clothing types
 2. **Segmentation**: Intelligent body part and clothing detection
 3. **Preprocessing**: Image resizing, cropping, and mask generation
 4. **Generation**: FLUX diffusion model creates the try-on result
 5. **Post-processing**: Upscaling and final image optimization
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Docker (recommended) OR Python 3.8+
@@ -64,15 +64,15 @@ git clone https://github.com/YashBhamare123/TryOn.git
 cd TryOn
 ```
 
-### 2. 🐳 ComfyUI Backend Setup (RunPod)
+### 2.  ComfyUI Backend Setup (RunPod)
 
-#### Option A: Use Pre-built Docker Image (Recommended) 🐳
+#### Option A: Use Pre-built Docker Image (Recommended) 
 ```bash
 # Pull the pre-built Docker image
 docker pull yashbhamare123/tryon:runpod
 ```
 
-#### Option B: Build Docker Image Yourself 🔨
+#### Option B: Build Docker Image Yourself 
 ```bash
 cd TryOnBackend
 
@@ -159,27 +159,27 @@ python -m http.server 8080
 - API Documentation: `http://localhost:8100/docs`
 - RunPod ComfyUI: Your RunPod proxy URL
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 the-fitting-room/
-├── 📂 TryOnBackend/
-│   ├── 🐍 main.py                 # FastAPI application entry point
-│   ├── 🔧 comfy_behind_api.py     # ComfyUI workflow orchestration
-│   ├── 🧠 intellisegment.py       # AI-powered image segmentation
-│   ├── 🗺️ node_id_map.py          # ComfyUI node ID mappings
-│   ├── 📋 requirements.txt        # Python dependencies
-│   ├── 🎯 prompt.txt              # AI segmentation prompts
-│   └── 📊 Best_TryOn_V7.json      # ComfyUI workflow definition
-├── 📂 TryOnFrontend/
-│   ├── 🏠 index.html              # Main application interface
-│   ├── 🎨 style.css               # Styling and animations
-│   ├── ⚡ script.js               # Core application logic
-│   ├── 📤 image-upload.js         # Image upload handling
-│   ├── ⚙️ config.js               # Configuration settings
-│   └── 🔗 temp-url-service.js     # Temporary URL generation
-├── 📄 README.md                   # This file
-└── 📜 LICENSE                     # MIT License
+├──  TryOnBackend/
+│   ├──  main.py                 # FastAPI application entry point
+│   ├──  comfy_behind_api.py     # ComfyUI workflow orchestration
+│   ├──  intellisegment.py       # AI-powered image segmentation
+│   ├──  node_id_map.py          # ComfyUI node ID mappings
+│   ├──  requirements.txt        # Python dependencies
+│   ├──  prompt.txt              # AI segmentation prompts
+│   └──  Best_TryOn_V7.json      # ComfyUI workflow definition
+├── TryOnFrontend/
+│   ├──  index.html              # Main application interface
+│   ├──  style.css               # Styling and animations
+│   ├──  script.js               # Core application logic
+│   ├──  image-upload.js         # Image upload handling
+│   ├──  config.js               # Configuration settings
+│   └──  temp-url-service.js     # Temporary URL generation
+├──  README.md                   # This file
+└──  LICENSE                     # MIT License
 ```
 
 ## 🔧 Configuration
@@ -189,9 +189,9 @@ The backend can be configured through environment variables:
 
 | Variable | Description | Required | Example |
 |----------|-------------|----------|---------|
-| `runpod_server` | RunPod ComfyUI proxy URL | ✅ | `https://abc123-8188.proxy.runpod.net` |
-| `GROQ_API_KEY` | Groq API key for AI segmentation | ✅ | `gsk_...` |
-| `DEBUG` | Enable debug logging | ❌ | `true` |
+| `runpod_server` | RunPod ComfyUI proxy URL  | `https://abc123-8188.proxy.runpod.net` |
+| `GROQ_API_KEY` | Groq API key for AI segmentation  | `gsk_...` |
+| `DEBUG` | Enable debug logging  | `true` |
 
 **Getting your RunPod URL:**
 1. Start your RunPod pod with the ComfyUI image
@@ -208,7 +208,7 @@ Edit `TryOnFrontend/config.js` to configure:
 - **UI Settings**: Preview options and upload behavior
 - **Debug Options**: Logging and error reporting
 
-## 🎯 API Endpoints
+##  API Endpoints
 
 ### `GET /output`
 Generate a virtual try-on image.
@@ -227,7 +227,7 @@ Generate a virtual try-on image.
 }
 ```
 
-## 🧪 Usage Examples
+##  Usage Examples
 
 ### Basic Try-On
 ```javascript
@@ -250,7 +250,7 @@ result = response.json()
 print('Generated images:', result['imageUrl'])
 ```
 
-## 🎨 Supported Clothing Types
+##  Supported Clothing Types
 
 The AI can intelligently detect and process:
 
@@ -259,7 +259,7 @@ The AI can intelligently detect and process:
 - **Full Body**: Dresses, jumpsuits, overalls
 - **Accessories**: Belts (when part of dresses)
 
-## 🔍 How It Works
+##  How It Works
 
 ### 1. Image Upload & Validation
 - Users upload subject and clothing images
@@ -281,7 +281,7 @@ The AI can intelligently detect and process:
 - URLs are returned to the frontend
 - Users can preview and download results
 
-## 🛠️ Development
+##  Development
 
 ### Adding New Features
 1. **Backend**: Extend `main.py` with new endpoints
@@ -303,7 +303,7 @@ curl "http://localhost:8100/output?subject_url=test1.jpg&clothes_url=test2.jpg"
 - Monitor backend logs for API errors
 - Verify ComfyUI server connectivity
 
-## 🚨 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -334,42 +334,19 @@ curl "http://localhost:8100/output?subject_url=test1.jpg&clothes_url=test2.jpg"
 - Check network connectivity to RunPod server
 - Ensure models are fully loaded (first run may be slower)
 
-## 🤝 Contributing
-
-We welcome contributions! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
-
-### Development Guidelines
-- Follow PEP 8 for Python code
-- Use meaningful commit messages
-- Add comments for complex logic
-- Test your changes thoroughly
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **ComfyUI**: For the powerful diffusion model workflow system
 - **FLUX**: For state-of-the-art diffusion models
 - **Groq**: For fast AI inference capabilities
 - **Cloudinary**: For reliable image hosting and optimization
 
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/YashBhamare123/the-fitting-room/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/YashBhamare123/the-fitting-room/discussions)
-- **Email**: [Contact the maintainer](mailto:thevoiceofyashbhamare@gmail.com)
-
 ---
 
 <div align="center">
   <p>Made with ❤️ by <a href="https://github.com/YashBhamare123">AIML009</a></p>
-  <p>⭐ Star this repo if you find it helpful!</p>
 </div>
